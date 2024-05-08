@@ -1,0 +1,174 @@
+{
+	"info": {
+		"_postman_id": "87a453b6-1f49-4a91-af38-ee1eb9b562be",
+		"name": "Trupper Services",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18775473"
+	},
+	"item": [
+		{
+			"name": "saveAllCompras",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "root",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"idCliente\": 720010,\r\n        \"nombreLista\": \"Lista Mensual\",\r\n        \"lstProductos\": [\r\n            {\r\n                \"idProducto\": 18156,\r\n                \"cantidad\": 5\r\n            }\r\n        ]\r\n    },\r\n    {\r\n        \"idCliente\": 710020,\r\n        \"nombreLista\": \"Lista Semanal\",\r\n        \"lstProductos\": [\r\n            {\r\n                \"idProducto\": 10200,\r\n                \"cantidad\": 5\r\n            },\r\n            {\r\n                \"idProducto\": 25020,\r\n                \"cantidad\": 6\r\n            },\r\n            {\r\n                \"idProducto\": 10170,\r\n                \"cantidad\": 1\r\n            }\r\n        ]\r\n    },\r\n    {\r\n        \"idCliente\": 710020,\r\n        \"nombreLista\": \"Lista Anual\",\r\n        \"lstProductos\": [\r\n            {\r\n                \"idProducto\": 10280,\r\n                \"cantidad\": 2\r\n            },\r\n            {\r\n                \"idProducto\": 30001,\r\n                \"cantidad\": 3\r\n            },\r\n            {\r\n                \"idProducto\": 10200,\r\n                \"cantidad\": 7\r\n            },\r\n            {\r\n                \"idProducto\": 25020,\r\n                \"cantidad\": 2\r\n            },\r\n            {\r\n                \"idProducto\": 10170,\r\n                \"cantidad\": 9\r\n            }\r\n        ]\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9090/compras/saveAllCompras",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"compras",
+						"saveAllCompras"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getByIdCliente",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "root",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9090/compras/getByIdCliente/720010",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"compras",
+						"getByIdCliente",
+						"720010"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateDatelleCompra",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "root",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    [\r\n        {\r\n            \"idCliente\": 720010,\r\n            \"nombreLista\" : \"Lista Actualizada\",\r\n            \"lstProductos\" : [\r\n                    {\r\n                        \"idProducto\": 25020,\r\n                        \"cantidad\" : 2\r\n\r\n                    },\r\n                     {\r\n                        \"idProducto\": 10170,\r\n                        \"cantidad\" : 9\r\n\r\n                    }\r\n            ]\r\n        }\r\n    ]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9090/compras/updateDatelleCompra",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"compras",
+						"updateDatelleCompra"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteCompraBycliente",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "root",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idCliente\": 720010,\r\n    \"nombreLista\" : \"Lista Actualizada\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9090/compras/deleteCompraBycliente",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"compras",
+						"deleteCompraBycliente"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
